@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* 禁止用户选择文字,和关闭手机端的触摸 */
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  outline: none;
+  color: var(--contrasting-color);
+}
+/* 字体设定 */
+:root {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+body {
+  background: var(--bg-color);
+  background-image: var(--bg-linear-gradient);
+  color: var(--text-color);
+  transition: all 0.2s ease-in-out;
+
+  /* 设置宽高,限制死,让页面无法滚动 */
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  /* 让 Todo 盒子居中在页面 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 最外层的包裹整个 Todo 的盒子 */
+.todo-container {
+  padding: 20px;
+  width: 90%;
+  height: 95%;
+  border-radius: var(--rounded-sm);
+  border: 1px solid var(--border-color);
+  background: var(--complementary-colors);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.1);
+}
+/* Todo的顶部操作栏 */
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* 文字悬浮效果 */
+.text-hover {
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: background 0.1s ease-in-out;
+}
+.text-hover:hover {
+  background: var(--hover-bg);
+  cursor: pointer;
+}
+
+.main-container {
+  width: 100%;
+  margin-top: 2vh;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  display: flex;
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+.form-input {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 12px 8px;
+  font-size: 1rem;
+  padding: 14px 8px;
+  position: relative;
+  color: var(--text-color);
+  border-radius: var(--rounded-sm);
+  border: 1px solid var(--border-color);
+
+}
+.form-input:focus {
+  background: var(--hover-bg);
+}
+
+.form-button {
+  width: 40%;
+  border-radius: var(--rounded-sm);
+  border: none;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  background: var(--component-bg);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.form-button:hover {
+  cursor: pointer;
+  background: var(--hover-bg);
+}
+
+.form-button > .icon {
+  height: 1.5rem;
+}
+
+.todo-list {
+  margin-top: 2vh;
+  list-style: none;
+  width: 100%;
+  height: 80%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.todo-list::-webkit-scrollbar {
+  display: none;
+}
+.todo-item {
+  padding: 12px;
+  background: var(--hover-bg);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--rounded-sm);
+}
+.todo-item > div {
+  height: 100%;
+}
+.todo-item button {
+  height: 100%;
+  border: none;
+  background: none;
+  color: var(--text-color);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: var(--rounded-sm);
+  transition: all 0.2s ease-in-out;
+}
+.todo-item button:hover {
+  cursor: pointer;
+  background: var(--button-hover);
+}
+.todo-item button > .icon {
+  height: 1.2rem;
+}
+
+.item-options {
+  display: flex;
+  gap: 8px;
+}

@@ -1,0 +1,7 @@
+/* 适配电脑端的样式 */
+@media (min-width: 640px) {
+  .todo-container {
+    width: 55vmin;
+    height: 80vmin;
+  }
+}

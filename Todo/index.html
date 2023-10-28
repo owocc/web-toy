@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo for HTML</title>
+    <link rel="stylesheet" href="./style/var.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/pc.css" />
+    <script src="./js/todo.js"></script>
+    <script src="./js/gsap/gsap.min.js"></script>
+    <script src="./js/gsap/Draggable.min.js"></script>
+    <script src="./js/gsap/Flip.min.js"></script>
+    <script src="./js/useGsap.js"></script>
+  </head>
+  <body>
+    <!-- 最外层的盒子 -->
+    <div class="todo-container">
+      <!-- 顶部栏,Logo和操作 -->
+      <nav class="navbar">
+        <div>
+          <h1 class="text-hover">To Day</h1>
+        </div>
+      </nav>
+
+      <main class="main-container">
+        <form id="addForm">
+          <div class="form-container">
+            <input
+              id="formInput"
+              class="form-input"
+              type="text"
+              placeholder="今天要干点什么呢?"
+            />
+            <button class="form-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="icon"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"
+                />
+              </svg>
+              Add
+            </button>
+          </div>
+        </form>
+
+        <ul class="todo-list" id="todoList"></ul>
+      </main>
+    </div>
+  </body>
+</html>
